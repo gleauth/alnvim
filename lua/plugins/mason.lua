@@ -1,8 +1,9 @@
 return {
     {
         "williamboman/mason.nvim",
+        build = ":MasonUpdate",
         lazy = true,
-        cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonLog" },
+        cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonLog", "MasonUpdate" },
         opts = {
             ui = {
                 icons = {
