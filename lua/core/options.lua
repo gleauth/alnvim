@@ -34,7 +34,7 @@ vim.o.incsearch      = true
 vim.o.hlsearch       = true
 -- 拼写建议
 vim.o.spell          = true
-vim.o.spelllang      = { 'en_us' }
+vim.opt.spelllang    = { 'en_us' }
 -- 鼠标支持
 vim.opt.mouse:append("a")
 -- 启用系统剪切板
