@@ -45,10 +45,11 @@ return {
                 rainbow = {
                     enable = true,
                     query = "rainbow-parens",
-                    strategy = require 'ts-rainbow.strategy.global',
+                    strategy = require("ts-rainbow").strategy.global,
                 },
                 context_commentstring = {
-                    enable = true
+                    enable = true,
+                    enable_autocmd = false,
                 },
                 textobjects = {
                     select = {

@@ -1,5 +1,5 @@
 return {
-    -- 状态栏显示git信息
+    -- 显示git信息
     {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",

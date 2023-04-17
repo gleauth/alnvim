@@ -61,9 +61,7 @@ return {
                                     end
                                 }
                             },
-                            {
-                                name = "spell"
-                            },
+                            { name = "spell" },
                         }
                     ),
                     -- 格式化补全菜单
