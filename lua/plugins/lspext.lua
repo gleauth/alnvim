@@ -13,7 +13,7 @@ return {
         "glepnir/lspsaga.nvim",
         lazy = true,
         cmd = "Lspsaga",
-        kesy = {
+        keys = {
             -- 诊断跳转，<c-o>跳回
             { "]e",          "<cmd>Lspsaga diagnostic_jump_prev<CR>",    desc = "Diagnotics Jump Prev" },
             { "[e",          "<cmd>Lspsaga diagnostic_jump_next<CR>",    desc = "Diagnotics Jump Next" },

@@ -4,7 +4,7 @@ return {
         "akinsho/bufferline.nvim",
         version = "v3.*",
         event = "VeryLazy",
-        dependencies = "nvim-web-devicons",
+        dependencies = { "nvim-web-devicons" },
         opts = {
             options = {
                 -- 为每个 buffer 都配置一个序数
@@ -33,7 +33,7 @@ return {
                 }
             }
         },
-        kesy = {
+        keys = {
             { "<M-p>",      "<cmd>BufferLineCyclePrev<CR>",  desc = "Goto Prev Buffer" },
             { "<M-n>",      "<cmd>BufferLineCycleNext<CR>",  desc = "Goto Next Buffer" },
             { "<leader>bl", "<cmd>BufferLineCloseLeft<CR>",  desc = "Close Left Buffer" },
