@@ -3,22 +3,23 @@ return {
     {
         "akinsho/toggleterm.nvim",
         version = '*',
-        cmd = {"ToggleTerm","TermExec","ToggleTermToggleAll"},
+        cmd = { "ToggleTerm", "TermExec", "ToggleTermToggleAll" },
         keys = {
-            {"<leader>ta","<cmd>ToggleTerm<CR>",desc = "Open Terminal"},
-            {"<leader>tg","<cmd>lua _lazygit_toggle()<CR>",desc="Lazygit Terminal"},
+            { "<leader>ta", "<cmd>ToggleTerm<CR>",            desc = "Open Terminal" },
+            { "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", desc = "Lazygit Terminal" },
         },
         config = function()
             -- 自定义终端
-            local Terminal  = require('toggleterm.terminal').Terminal
+            local Terminal = require('toggleterm.terminal').Terminal
 
-            local lazygit = Terminal:new({
+            local lazygit  = Terminal:new({
                 cmd = "lazygit",
                 hidden = true
             })
             function _lazygit_toggle()
                 lazygit:toggle()
             end
+
             -- 终端启动调用
             require("toggleterm").setup({
                 persist_size = false,

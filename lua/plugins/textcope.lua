@@ -16,63 +16,22 @@ return {
         },
         opts = {}
     },
-    -- 单词或符号快速取反意
-    {
-        "AndrewRadev/switch.vim",
-        lazy = true,
-        cmd = { "Switch", "SwitchExpend", "SwitchReverse" },
-        keys = {
-            { "<leader>sh", "<cmd>Switch<CR>", desc = "Switch Word" }
-        },
-        init = function()
-            vim.g.switch_custom_definitions = "push_words"
-        end,
-        config = function()
-            local switch_words = {
-                { "true",    "false" },
-                { "on",      "off" },
-                { "yes",     "no" },
-                { "disable", "enable" },
-                { "+",       "-" },
-                { ">",       "<" },
-                { "=",       "!=" },
-                { "*",       "/" },
-                { "left",    "right" },
-                { "up",      "down" },
-                { "front",   "rear" },
-                { "quick",   "slow" },
-                { "out",     "in" },
-                { "input",   "output" },
-                { "and",     "or" },
-                { "||",      "&&" },
-            }
-            -- enable Enable ENABLE
-            -- 定义增加单词的容器
-            local push_words = {}
-            for _, value in ipairs(switch_words) do
-                local w1, w2 = value[1], value[2]
-                -- 全小写
-                table.insert(push_words, value)
-                -- 全大写
-                table.insert(push_words, { string.upper(w1), string.upper(w2) })
-                -- 首字母大写，%l 代表小写字母，只取第一个
-                w1, _ = string.gsub(w1, "^%l", string.upper)
-                w2, _ = string.gsub(w2, "^%l", string.upper)
-                table.insert(push_words, { w1, w2 })
-            end
-        end
-    },
     -- 文本字符替换
     {
         "nvim-pack/nvim-spectre",
         lazy = true,
         keys = {
-            {"<leader>so","<cmd>lua require('spectre').open()<CR>",desc = "Open Spectre"},
-            {"<leader>sw","<cmd>lua require('spectre').open_visual({select_word=true})<CR>",desc = "Open Visual Select Word"},
-            {"<leader>sf","viw:lua require('spectre').open_file_search()<CR>",desc = "Open File Search"},
-            {"<leader>sh",mode = "v",desc = "Open Visual Mode"}
+            { "<leader>so", "<cmd>lua require('spectre').open()<CR>",            desc = "Open Spectre" },
+            {
+                "<leader>sw",
+                "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+                desc =
+                "Open Visual Select Word"
+            },
+            { "<leader>sf", "viw:lua require('spectre').open_file_search()<CR>", desc = "Open File Search" },
+            { "<leader>sh", mode = "v",                                          desc = "Open Visual Mode" }
         },
-        config = function ()
+        config = function()
             require("spectre").setup({
                 mapping = {
                     ['toggle_line'] = {
@@ -97,7 +56,7 @@ return {
                         map = "<leader>sa",
                     },
                     ['change_view_mode'] = {
-                    map = "<leader>sv",
+                        map = "<leader>sv",
                     },
                     ['change_replace_sed'] = {
                         map = "ss",
@@ -105,7 +64,7 @@ return {
                     ['change_replace_oxi'] = {
                         map = "<leader>sx",
                     },
-                    ['toggle_live_update']={
+                    ['toggle_live_update'] = {
                         map = "<leader>su",
                     },
                     ['toggle_ignore_case'] = {
@@ -119,7 +78,7 @@ return {
                     },
                 }
             })
-            vim.keymap.set("v","<leader>sh","<esc>:lua require('spectre').open_visual()<CR>")
+            vim.keymap.set("v", "<leader>sh", "<esc>:lua require('spectre').open_visual()<CR>")
         end
     },
     -- 修改定界符
@@ -128,9 +87,9 @@ return {
         version = "*",
         lazy = true,
         keys = {
-            {"ys",mode = {"n","x"},desc = "Add surround"},
-            {"ds",mode = {"n","x"},desc = "Delete surround"},
-            {"cs",mode = {"n","x"},desc = "change quotes"},
+            { "ys", mode = { "n", "x" }, desc = "Add surround" },
+            { "ds", mode = { "n", "x" }, desc = "Delete surround" },
+            { "cs", mode = { "n", "x" }, desc = "change quotes" },
         },
         config = true
     }

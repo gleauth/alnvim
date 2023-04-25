@@ -5,7 +5,7 @@ local settings = {
     },
     install = {
         missing = true,
-        colorscheme = {"onedark"},
+        colorscheme = { "onenord" },
     },
     checker = {
         enabled = true,
@@ -49,4 +49,4 @@ local settings = {
         }
     }
 }
-require("lazy").setup("plugins",settings)
+require("lazy").setup("plugins", settings)
