@@ -17,9 +17,6 @@ return {
             -- 诊断跳转，<c-o>跳回
             { "]e",          "<cmd>Lspsaga diagnostic_jump_prev<CR>",    desc = "Diagnotics Jump Prev" },
             { "[e",          "<cmd>Lspsaga diagnostic_jump_next<CR>",    desc = "Diagnotics Jump Next" },
-            { "]E",          mode = { "n" },                             desc = "Goto Prev Diagnotics Serverity ERROR" },
-            { "[E",          mode = { "n" },                             desc = "Goto Next Diagnotics Serverity ERROR" },
-            { "<M-A>",       mode = { "n", "v" },                        desc = "Lspsaga Show Code Action" },
             { "<leader>lgb", "<cmd>Lspsaga show_buf_diagnostics<CR>",    desc = "Show Buffer Diagnotics" },
             { "<leader>lgd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", desc = "Show Cursor Local Diagnotics" },
             { "<leader>lgr", "<cmd>Lspsaga rename<CR>",                  desc = "Lspsaga Rename" },

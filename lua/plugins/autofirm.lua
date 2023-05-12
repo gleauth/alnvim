@@ -13,7 +13,7 @@ return {
     {
         "altermo/ultimate-autopair.nvim",
         lazy = true,
-        event = { "InsertEnter" },
+        event = { "InsertEnter", "CmdlineEnter" },
         opts = {}
     },
     -- 自动恢复光标位置

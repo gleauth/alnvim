@@ -54,12 +54,6 @@ return {
             starter.setup(config)
         end
     },
-    -- 平滑滚动
-    {
-        "karb94/neoscroll.nvim",
-        event = "VeryLazy",
-        opts = {}
-    },
     -- 文件目录树
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -103,7 +97,7 @@ return {
         event = "VeryLazy",
         config = function()
             local colors = {
-                Handle = "#EE9888",
+                Handle = "#EE9088",
                 Search = "#1FC867",
                 Error = "#FD6883",
                 Warn = "#FFD886",

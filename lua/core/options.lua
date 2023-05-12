@@ -75,6 +75,6 @@ vim.o.langmenu       = "en_US.UTF-8"
 vim.wo.foldmethod    = "expr"
 vim.wo.foldexpr      = "nvim_treesitter#foldexpr()"
 vim.wo.foldlevel     = 99
-vim.o.foldcolumn     = '1' -- '0' is not bad
+vim.o.foldcolumn     = '1'
 vim.o.foldlevelstart = 99
 vim.o.foldenable     = true

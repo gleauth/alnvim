@@ -5,14 +5,7 @@ return {
         lazy = true,
         event = { "BufReadPost", "BufNewFile" },
         config = function()
-            local opts = {
-                providers = {
-                    "treesitter",
-                    'lsp',
-                    'regex',
-                },
-            }
-            require("illuminate").configure(opts)
+            require("illuminate").configure()
         end,
         keys = {
             { "<leader>ig", "<cmd>IlluminateToggle<CR>",    desc = "Toggle Illuminate" },

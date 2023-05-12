@@ -20,27 +20,6 @@ return {
         },
         opts = {}
     },
-    -- 正则表达式解释器
-    {
-        "bennypowers/nvim-regexplainer",
-        lazy = true,
-        keys = {
-            { "gR", mode = { "n", "v" }, desc = "Toggle Regexplainer" },
-            { "gS", mode = { "n", "v" }, desc = "Show Regexplainer" },
-            { "gH", mode = { "n", "v" }, desc = "Hide Regexplainer" },
-            { "gL", mode = { "n", "v" }, desc = "Show_split Regexplainer" },
-            { "gP", mode = { "n", "v" }, desc = "Show_popup Regexplainer" }
-        },
-        opts = {
-            mappings = {
-                toggle = "gR",
-                show = "gS",
-                hide = "gH",
-                show_split = "gL",
-                show_popup = "gP",
-            }
-        }
-    },
     -- 优化buffer关闭
     {
         "famiu/bufdelete.nvim",
